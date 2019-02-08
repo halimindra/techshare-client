@@ -4,11 +4,8 @@ Sample project to benchmark REST API call vs gRPC call
 ## Command
 ### Request to server 
 ```
-go run main.go -mode=rest -server_addr=http://127.0.0.1:10000
+go run main.go -mode=<rest or grpc> -server_addr=<server address>
 ```
-Available options:
--mode: rest, grpc
--server_addr: server url
 
 ### Sample run call to REST API server
 ```
