@@ -18,7 +18,7 @@ def run():
             print(stub.GetPerson(tech_share_pb2.PersonRequest(id=2)))
 
             print("-------------- ListPeople --------------")
-            people = stub.ListPeople(tech_share_pb2.PeopleRequest(limit=100000))
+            people = stub.ListPeople(tech_share_pb2.PeopleRequest(limit=2000000))
             for person in people:
                 print(person)
 

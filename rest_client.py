@@ -11,7 +11,7 @@ def run():
     print("-------------- GetPerson --------------")
     print(r.json())
 
-    r = requests.get("http://localhost:10000/people?limit=1000000")
+    r = requests.get("http://localhost:10000/people?limit=2000000")
     print("-------------- ListPeople --------------")
     for person in r.json():
         print(person)
