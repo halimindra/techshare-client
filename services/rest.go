@@ -35,6 +35,7 @@ func PrintPersonREST(client *http.Client, serverAddr string, id int64) {
 		log.Fatal(err)
 	}
 
+	log.Println("-------------- GetPerson --------------")
 	log.Printf("%+v\n", person)
 }
 
@@ -63,6 +64,7 @@ func PrintPeopleREST(client *http.Client, serverAddr string, limit int64) {
 		log.Fatal(err)
 	}
 
+	log.Println("-------------- List People --------------")
 	for _, person := range people {
 		log.Printf("%+v\n", person)
 	}

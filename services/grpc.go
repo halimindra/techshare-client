@@ -13,6 +13,7 @@ func PrintPersonGRPC(client pb.TechShareClient, id int64) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
+	log.Println("-------------- GetPerson --------------")
 	person, err := client.GetPerson(ctx, &pb.PersonRequest{Id: id})
 	if err != nil {
 		log.Print(err)
@@ -30,6 +31,7 @@ func PrintPeopleGRPC(client pb.TechShareClient, limit int64) {
 		log.Fatal(err)
 	}
 
+	log.Println("-------------- ListPeople --------------")
 	for {
 		person, err := stream.Recv()
 		if err == io.EOF {
